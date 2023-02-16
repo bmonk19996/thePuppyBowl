@@ -11,3 +11,12 @@ body {
     max-height: 10%;
     min-height: 40px;
 }
+
+.player-card{
+    display: flex;
+    border: solid;
+    margin:5px;
+}
+.player-image{
+    height:100px;
+}

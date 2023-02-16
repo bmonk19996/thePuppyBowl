@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Navbar, PlayerList, PlayerCard} from "./";
+import { Navbar, PlayerList, Search} from "./";
 import getPlayers from "../API-Adapt";
 
 
@@ -8,7 +8,6 @@ const Main = () => {
     async function retrievePlayers () {
         const myPlayers = await getPlayers()
         setPlayers (myPlayers.data.players)    
-        console.log(myPlayers)
     }
     useEffect(() => {
         retrievePlayers()  
@@ -18,6 +17,7 @@ const Main = () => {
     return(
         <div id="main">
             <Navbar />
+            <Search/>
             <PlayerList players={players}/>
         </div>
     )
