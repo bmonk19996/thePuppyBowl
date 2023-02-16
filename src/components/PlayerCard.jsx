@@ -3,8 +3,8 @@ import React from "react";
 
 function playerCard(props){
 
-    const count = props.count
-    return <div>{count}</div>
+    const player = props.player
+    return <div></div>
 }
 
 export default playerCard

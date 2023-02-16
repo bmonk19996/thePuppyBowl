@@ -4,22 +4,21 @@ import getPlayers from "../API-Adapt";
 
 
 const Main = () => {
-    const [players, setPlayers] = useState ({})
+    const [players, setPlayers] = useState (null)
     async function retrievePlayers () {
         const myPlayers = await getPlayers()
-        setPlayers (myPlayers)    
-
+        setPlayers (myPlayers.data.players)    
+        console.log(myPlayers)
     }
     useEffect(() => {
         retrievePlayers()  
 
     },[])
 
-console.log(players)
     return(
         <div id="main">
             <Navbar />
-            <PlayerList/>
+            <PlayerList players={players}/>
         </div>
     )
 }
