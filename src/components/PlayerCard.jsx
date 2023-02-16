@@ -2,7 +2,6 @@ import React from "react";
 
 function playerCard(props) {
   const player = props.player;
-  console.log(player);
   return (
     <div className="player-card">
     <span className="puppy-info">

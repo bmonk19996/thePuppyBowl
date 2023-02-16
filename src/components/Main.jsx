@@ -17,7 +17,7 @@ const Main = () => {
     return(
         <div id="main">
             <Navbar />
-            <Search/>
+            <Search players={players} setPlayers={setPlayers}/>
             <PlayerList players={players}/>
         </div>
     )
