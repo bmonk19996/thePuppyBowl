@@ -5,9 +5,10 @@ function playerCard(props) {
   console.log(player);
   return (
     <div className="player-card">
-      <span>{player.name}</span>
-      <span>{player.id}</span>
-
+    <span className="puppy-info">
+      <span className="player-name">{player.name}</span>
+      <span className="player-id">{player.id}</span>
+    </span>
       <img className="player-image" src={player.imageUrl} />
       <button>details</button>
       <button>delete</button>
