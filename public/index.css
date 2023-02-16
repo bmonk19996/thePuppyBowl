@@ -14,9 +14,32 @@ body {
 
 .player-card{
     display: flex;
+    flex-direction: column;
     border: solid;
     margin:5px;
+    align-items: center;
+    font-size: 25px;
+}
+.player-card button{
+    width:300px;
 }
 .player-image{
-    height:100px;
+    height:400px;
+    width: 300px;
+    align-self:center;
+}
+#searchBar{
+    display: flex;
+    justify-content: center;
+}
+.search{
+    margin: 5px;
+}
+.player-name{
+margin-right: 6px;
+}
+#player-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
