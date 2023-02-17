@@ -60,7 +60,7 @@ margin-right: 6px;
     border-radius: 25px;
     margin:3px;
     font-size: 20px;
-    box-shadow: 10px 10px black;
+    box-shadow: 10px 10px 5px black;
 }
 #detail-card div{
     display: flex;
