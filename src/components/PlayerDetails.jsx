@@ -35,7 +35,8 @@ function toUpperCase(str){
                 <div className="detail-text">Breed: {player.breed}</div>
 
                 {player.team ?
-                <div className="detail-text">Team: {player.team.name}</div> :null
+                <div className="detail-text">Team: {player.team.name}</div> 
+                :<div className="detail-text">Team: none</div>
                 }
 
                 <div className="detail-text">Status: {toUpperCase(player.status)}</div>
