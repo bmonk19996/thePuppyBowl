@@ -1,36 +1,45 @@
 import React, { useEffect, useState } from "react";
 
 export default function Search(props) {
+  const allPlayers = props.allPlayers
   const players = props.players;
   const setPlayers = props.setPlayers;
   const [searchName, setSearchName] = useState("");
   const [searchBreed, setSearchBreed] = useState("");
-  // function playersByName(str){
-  //   const newPlayers = []
-  //   if(players){
-  //     for(let i = 0; i < players.length; i++){
-  //       console.log(players[i], str)
-  //       if(players[i].name.includes(str)){
-  //         newPlayers.push(players[i])
-  //       }
-  //     }
-  //     console.log(newPlayers)
-  //     setPlayers(newPlayers);
-  //   }
-  // }
-  // function playersByBreed(str){
-  //   const newPlayers = []
-  //   if(players){
-  //     for(let i = 0; i < players.length; i++){
-  //       console.log(players[i], str)
-  //       if(players[i].breed.includes(str)){
-  //         newPlayers.push(players[i])
-  //       }
-  //     }
-  //     console.log(newPlayers)
-  //     setPlayers(newPlayers);
-  //   }
-  // }
+
+
+  function playersByName(str){
+    const newPlayers = []
+    if(str === ''){
+      setPlayers(allPlayers)
+      return
+    }
+    if(allPlayers){
+      for(let i = 0; i < allPlayers.length; i++){
+        if(allPlayers[i].name.includes(str)){
+          newPlayers.push(allPlayers[i])
+        }
+      }
+      setPlayers(newPlayers);
+    }
+  }
+
+
+  function playersByBreed(str){
+    const newPlayers = []
+    if(str === ''){
+      setPlayers(allPlayers)
+      return
+    }
+    if(allPlayers){
+      for(let i = 0; i < allPlayers.length; i++){
+        if(allPlayers[i].breed.includes(str)){
+          newPlayers.push(allPlayers[i])
+        }
+      }
+      setPlayers(newPlayers);
+    }
+  }
 
   return (
     <div id="searchBar">
@@ -38,7 +47,7 @@ export default function Search(props) {
         Name:
         <input
           onInput={function (event) {
-            console.log(event.target.value);
+            playersByName(event.target.value)
           }}
           type="text"
         ></input>
@@ -47,7 +56,7 @@ export default function Search(props) {
         Breed:
         <input
           onInput={function (event) {
-            console.log(event.target.value);
+            playersByBreed(event.target.value)
           }}
           type="text"
         ></input>
