@@ -5,7 +5,7 @@ function PlayerList(props){
     const players = props.players
     return( 
     <div id="player-list">
-        {players ? players.map((player,idx) =>{
+        {players.length ? players.map((player,idx) =>{
             return <PlayerCard player={player} key={`PlayerList:${idx}`}/>
         }):null}
         
