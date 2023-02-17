@@ -24,7 +24,7 @@ body {
     margin:15px;
     align-items: center;
     font-size: 25px;
-    box-shadow: 10px 10px black;
+    box-shadow: 10px 10px 5px black;
 }
 .player-image{
     height:400px;
