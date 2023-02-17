@@ -4,6 +4,7 @@ import { Outlet, Link } from 'react-router-dom';
 
 function playerCard(props) {
   const player = props.player;
+  let id = player.id;
   return (
     <div className="player-card">
     <span className="puppy-info">
@@ -11,9 +12,7 @@ function playerCard(props) {
       <span className="player-id">{player.id}</span>
     </span>
       <img className="player-image" src={player.imageUrl} />
-      <button onClick={function () {
-          console.log("need function");
-        }}><Link to={`${player.id}`}>details</Link></button>
+      <button><Link to={`${id}`}>details</Link></button>
     <Outlet />
     </div>
   );
