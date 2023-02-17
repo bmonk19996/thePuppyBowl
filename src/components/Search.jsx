@@ -34,24 +34,24 @@ export default function Search(props) {
 
   return (
     <div id="searchBar">
-      <form
-        onSubmit={function () {
-          console.log("need function");
-        }}
-        className="name search"
-      >
-        Name:<input type="text"></input>
-        <input type="submit" value="Submit"></input>
-      </form>
-      <form
-        onSubmit={function () {
-          console.log("need function");
-        }}
-        className="breed search"
-      >
-        Breed:<input type="text"></input>
-        <button>Submit</button>
-      </form>
+      <div className="name search">
+        Name:
+        <input
+          onInput={function (event) {
+            console.log(event.target.value);
+          }}
+          type="text"
+        ></input>
+      </div>
+      <div className="breed search">
+        Breed:
+        <input
+          onInput={function (event) {
+            console.log(event.target.value);
+          }}
+          type="text"
+        ></input>
+      </div>
     </div>
   );
 }
