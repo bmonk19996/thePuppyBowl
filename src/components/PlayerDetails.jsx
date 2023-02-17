@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {useParams, Link} from 'react-router-dom';
 import {getPlayer} from "../API-Adapt";
+import {Navbar} from "./"
 function PlayerDetails() {
     let {id} = useParams()
     const [player, setPlayer] = useState ({})
@@ -12,13 +13,19 @@ function PlayerDetails() {
     useEffect(() => {
         retrievePlayer()  
     },[])
-    return <div id="player-detail-view">
-        <Link to={`/`}>go back</Link>
-        <div>Breed: {player.breed}</div>
+   
+    return <div>
+        <Navbar />
+        <Link to={`/`} id="back-button">Go Back</Link>
+        <div id="player-detail-view">
+        <div id="detail-card">
+        <div>Name: {player.name}</div>
         <div>Id: {player.id}</div>
-        <div>name: {player.name}</div>
-        <div>status: {player.status}</div>
-        <img src={player.imageUrl}/>
+        <div>Breed: {player.breed}</div>
+        <div>Status: {player.status}</div>
+        <img id="detail-img" src={player.imageUrl}/>
+        </div>
+    </div>
     </div>
 }
 
