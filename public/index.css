@@ -20,9 +20,6 @@ body {
     align-items: center;
     font-size: 25px;
 }
-.player-card button{
-    width:300px;
-}
 .player-image{
     height:400px;
     width: 300px;
