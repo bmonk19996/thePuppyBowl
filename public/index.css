@@ -53,8 +53,11 @@ margin-right: 6px;
     flex-direction: column;
     border: solid;
     margin:3px;
-    align-items: center;
-    font-size: 20px;
+    font-size: 15px;
+}
+#detail-card div{
+    display: flex;
+    flex-wrap: wrap;
 }
 #back-button{
     font-size: 20px;
@@ -70,4 +73,15 @@ margin-right: 6px;
 #player-detail-view{
     display: flex;
     justify-content: center;
+}
+.details-button{
+    width: 300px;
+    font-size: 20px;
+    text-decoration: none;
+    color: blue;
+    border: solid 2px;
+    text-align: center;
+}
+.details-button:hover{
+    background-color: lightblue;
 }

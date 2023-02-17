@@ -33,8 +33,12 @@ function toUpperCase(str){
                 <div>Name: {player.name}</div>
                 <div>Id: {player.id}</div>
                 <div>Breed: {player.breed}</div>
+
+                {player.team ?
+                <div>Team: {player.team.name}</div> :null
+                }
+
                 <div>Status: {toUpperCase(player.status)}</div>
-                <div>Team: {player.team.name}</div>
                 <img id="detail-img" src={player.imageUrl}/>
             </div>
         </div>       

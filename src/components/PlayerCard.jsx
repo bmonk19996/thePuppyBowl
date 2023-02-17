@@ -12,7 +12,7 @@ function playerCard(props) {
       <span className="player-id">{player.id}</span>
     </span>
       <img className="player-image" src={player.imageUrl} />
-      <button><Link to={`${id}`}>details</Link></button>
+      <Link to={`${id}`} className="details-button">Details</Link>
     <Outlet />
     </div>
   );
