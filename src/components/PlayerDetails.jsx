@@ -30,15 +30,15 @@ function toUpperCase(str){
         ?
         <div id="player-detail-view">
             <div id="detail-card">
-                <div>Name: {player.name}</div>
-                <div>Id: {player.id}</div>
-                <div>Breed: {player.breed}</div>
+                <div className="detail-text">Name: {player.name}</div>
+                <div className="detail-text">Id: {player.id}</div>
+                <div className="detail-text">Breed: {player.breed}</div>
 
                 {player.team ?
-                <div>Team: {player.team.name}</div> :null
+                <div className="detail-text">Team: {player.team.name}</div> :null
                 }
 
-                <div>Status: {toUpperCase(player.status)}</div>
+                <div className="detail-text">Status: {toUpperCase(player.status)}</div>
                 <img id="detail-img" src={player.imageUrl}/>
             </div>
         </div>       

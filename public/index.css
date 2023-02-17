@@ -1,12 +1,19 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Dosis&display=swap"); */
+
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
 body {
     margin: 0;
 }
 
 #navbar {
+    font-family:"Faster One";
     background-color: black;
     color: white;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-grow: 1;
     max-height: 10%;
     min-height: 40px;
@@ -16,6 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     border: solid;
+    border-radius: 25px;
     margin:5px;
     align-items: center;
     font-size: 25px;
@@ -41,16 +49,19 @@ margin-right: 6px;
     justify-content: center;
 }
 #detail-img{
-    width: 300px;
-    height: 400px;
+    width: 600px;
+    height: 800px;
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
     align-self: center;
 }
 #detail-card{
     display: flex;
     flex-direction: column;
     border: solid;
+    border-radius: 25px;
     margin:3px;
-    font-size: 15px;
+    font-size: 25px;
 }
 #detail-card div{
     display: flex;
@@ -76,9 +87,14 @@ margin-right: 6px;
     font-size: 20px;
     text-decoration: none;
     color: blue;
-    border: solid 2px;
+
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
     text-align: center;
 }
 .details-button:hover{
     background-color: lightblue;
+}
+.detail-text{
+    margin-left: 15px;
 }
