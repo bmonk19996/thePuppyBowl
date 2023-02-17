@@ -7,7 +7,7 @@ body {
     font-family:"Faster One";
     font-size: 30px;
     background-color: black;
-    color: white;
+    color: aquamarine;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,13 +17,14 @@ body {
 }
 
 .player-card{
+    background-color: aquamarine;
     display: flex;
     flex-direction: column;
-    border: solid;
     border-radius: 25px;
-    margin:5px;
+    margin:15px;
     align-items: center;
     font-size: 25px;
+    box-shadow: 10px 10px black;
 }
 .player-image{
     height:400px;
@@ -53,12 +54,13 @@ margin-right: 6px;
     align-self: center;
 }
 #detail-card{
+    background-color: aquamarine;
     display: flex;
     flex-direction: column;
-    border: solid;
     border-radius: 25px;
     margin:3px;
     font-size: 20px;
+    box-shadow: 10px 10px black;
 }
 #detail-card div{
     display: flex;
