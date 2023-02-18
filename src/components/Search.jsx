@@ -1,44 +1,54 @@
 import React, { useEffect, useState } from "react";
 
 export default function Search(props) {
-  const allPlayers = props.allPlayers
+  const allPlayers = props.allPlayers;
   const players = props.players;
   const setPlayers = props.setPlayers;
   const [searchName, setSearchName] = useState("");
   const [searchBreed, setSearchBreed] = useState("");
 
-
-  function playersByName(str){
-    const newPlayers = []
-    if(str === ''){
-      setPlayers(allPlayers)
-      return
-    }
-    if(allPlayers){
-      for(let i = 0; i < allPlayers.length; i++){
-        if(allPlayers[i].name.includes(str)){
-          newPlayers.push(allPlayers[i])
-        }
+  function playersByName(str) {
+    setSearchName(str);
+    const newPlayers = [];
+    const namePlayers = search(str, "name");
+    const breedPlayers = search(searchBreed, "breed");
+    for (let i = 0; i < namePlayers.length; i++) {
+      if (breedPlayers.includes(namePlayers[i])) {
+        newPlayers.push(namePlayers[i]);
       }
-      setPlayers(newPlayers);
     }
+
+    setPlayers(newPlayers);
   }
 
+  function playersByBreed(str) {
+    setSearchBreed(str);
+    const newPlayers = [];
+    const namePlayers = search(str, "breed");
+    const breedPlayers = search(searchName, "name");
 
-  function playersByBreed(str){
-    const newPlayers = []
-    if(str === ''){
-      setPlayers(allPlayers)
-      return
+    for (let i = 0; i < namePlayers.length; i++) {
+      if (breedPlayers.includes(namePlayers[i])) {
+        newPlayers.push(namePlayers[i]);
+      }
     }
-    if(allPlayers){
-      for(let i = 0; i < allPlayers.length; i++){
-        if(allPlayers[i].breed.includes(str)){
-          newPlayers.push(allPlayers[i])
+
+    setPlayers(newPlayers);
+  }
+  //search by name or breed and return an array
+  function search(str, type) {
+    const newPlayers = [];
+    if (str === "") {
+      return allPlayers;
+    }
+    if (allPlayers) {
+      for (let i = 0; i < allPlayers.length; i++) {
+        if (allPlayers[i][type].includes(str)) {
+          newPlayers.push(allPlayers[i]);
         }
       }
-      setPlayers(newPlayers);
     }
+    return newPlayers;
   }
 
   return (
@@ -47,7 +57,7 @@ export default function Search(props) {
         Name:
         <input
           onInput={function (event) {
-            playersByName(event.target.value)
+            playersByName(event.target.value);
           }}
           type="text"
         ></input>
@@ -56,7 +66,7 @@ export default function Search(props) {
         Breed:
         <input
           onInput={function (event) {
-            playersByBreed(event.target.value)
+            playersByBreed(event.target.value);
           }}
           type="text"
         ></input>
