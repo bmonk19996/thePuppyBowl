@@ -43,7 +43,7 @@ export default function Search(props) {
     }
     if (allPlayers) {
       for (let i = 0; i < allPlayers.length; i++) {
-        if (allPlayers[i][type].includes(str)) {
+        if (((allPlayers[i][type]).toLowerCase()).includes(str.toLowerCase())) {
           newPlayers.push(allPlayers[i]);
         }
       }
