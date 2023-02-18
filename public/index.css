@@ -71,8 +71,6 @@ margin-right: 6px;
     text-decoration: none;
     color: blue;
     border: solid 2px;
-
-    
 }
 #back-button:hover{
     background-color: lightblue;
@@ -80,6 +78,7 @@ margin-right: 6px;
 #player-detail-view{
     display: flex;
     justify-content: center;
+    margin-bottom: 25px;
 }
 .details-button{
     width: 300px;
